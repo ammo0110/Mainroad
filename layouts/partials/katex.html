@@ -1,0 +1,15 @@
+{{- $defaultKatex := .Site.Data.config.default.katex -}}
+{{- $katex := ( or .Site.Data.config.katex $defaultKatex ) -}}
+
+{{- if eq .Params.katex true  -}}
+
+<link rel="stylesheet" href="{{- $katex.library.css.main -}}" integrity="{{- $katex.library.css.integrity -}}" crossorigin="anonymous">
+<script defer src="{{- $katex.library.js.main -}}" integrity="{{- $katex.library.js.integrity -}}" crossorigin="anonymous"></script>
+
+<script defer src="{{- $katex.library.js.autoRender -}}" integrity="{{- $katex.library.js.autoRenderIntegrity -}}" crossorigin="anonymous"
+  onload="renderMathInElement(document.querySelector('.primary'),
+    {{- $katex.options | jsonify | safeJS -}}
+  );">
+</script>
+
+{{- end -}}
