@@ -1,11 +1,12 @@
 {{ if .Site.Menus.side }}
+{{- $title := (or .Site.Params.widgets.sidemenu_title (T "sidemenu_title")) }}
 <div class="widget-sidemenu widget">
-	<h4 class="widget__title">{{ T "sidemenu_title" }}</h4>
+	<h4 class="widget__title">{{ $title }}</h4>
 	<nav class="widget__content">
 		<ul class="widget__list">
 			{{ range .Site.Menus.side }}
 			<li class="widget__item">
-				<a class="widget__link" href="{{ .URL }}">{{ .Name }}</a>
+				<b><a class="widget__link" href="{{ .URL }}">{{ .Name }}</a></b>
 			</li>
 			{{ end }}
 		</ul>
