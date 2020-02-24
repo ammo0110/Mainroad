@@ -441,7 +441,7 @@ select {
 	padding: 10px 15px;
 	padding: .625rem .9375rem;
 	font-weight: 700;
-	text-align: right;
+	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -515,6 +515,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	border-bottom: 1px solid rgba(255, 255, 255, .1);
 	-webkit-transform: scaleY(1);
 	transform: scaleY(1);
+	text-align: center;
 }
 
 .menu__list--transition {
@@ -770,20 +771,24 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	list-style: none;
 }
 
-.toc__menu ul ul ul a {
+.toc__menu ul ul a {
 	padding-left: 25px;
 }
 
-.toc__menu ul ul ul ul a {
+.toc__menu ul ul ul a {
 	padding-left: 45px;
 }
 
-.toc__menu ul ul ul ul ul a {
+.toc__menu ul ul ul ul a {
 	padding-left: 65px;
 }
 
-.toc__menu ul ul ul ul ul ul a {
+.toc__menu ul ul ul ul ul a {
 	padding-left: 85px;
+}
+
+.toc__menu ul ul ul ul ul ul a {
+	padding-left: 105px;
 }
 
 .toc__menu li {
