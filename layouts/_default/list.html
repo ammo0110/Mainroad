@@ -10,7 +10,7 @@
 		{{ . }}
 	</div>
 	{{- end }}
-	{{- range .Paginator.Pages }}
+	{{- range  (sort .Pages "Date" "asc" | .Paginate).Pages }}
 		{{- .Render "summary" }}
 	{{- end }}
 </main>
