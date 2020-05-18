@@ -4,14 +4,13 @@
 [MH Magazine lite](https://wordpress.org/themes/mh-magazine-lite/) WordPress theme by
 [MH Themes](https://www.mhthemes.com/).
 
-**[Demo (Fast update)](https://hugothemes.gitlab.io/mainroad/)** |
-[Standart Demo](https://themes.gohugo.io/theme/mainroad/)
+**[Demo (Fast update)](https://mainroad-demo.netlify.app/)** | [Standart Demo](https://themes.gohugo.io/theme/mainroad/)
 
 ![screenshot](https://github.com/Vimux/mainroad/blob/master/images/screenshot.png)
 
 **Features:**
 
-+ Hugo internal templates (Open Graph, Twitter Cards, Disqus, Google Analytics)
++ Hugo internal templates (Open Graph, Schema, Twitter Cards, Disqus, Google Analytics)
 + Responsive menu
 + Secondary menus
 + SVG icons
@@ -78,11 +77,12 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   description = "John Doe's Personal blog about everything" # Site description. Used in meta description
   copyright = "John Doe" # Footer copyright holder, otherwise will use site title
   opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
   twitter_cards = true # Enable Twitter Cards if true
   readmore = false # Show "Read more" button in list if true
   authorbox = true # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
-  post_navigation = true # Show post navigation at bottom of pages if true
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["date", "categories", "translations"] # Order of post meta information
   mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "2006-01-02" # Change the format of dates
@@ -154,8 +154,14 @@ thumbnail: "img/placeholder.jpg" # Thumbnail image
 lead: "Example lead - highlighted near the title" # Lead text
 comments: false # Enable Disqus comments for specific page
 authorbox: true # Enable authorbox for specific page
+pager: true # Enable pager navigation (prev/next) for specific page
 toc: true # Enable Table of Contents for specific page
 mathjax: true # Enable MathJax for specific page
+sidebar: "right" # Enable sidebar (on the right side) per page
+widgets: # Enable sidebar widgets in given order per page
+  - "search"
+  - "recent"
+  - "taglist"
 ---
 ```
 

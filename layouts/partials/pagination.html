@@ -1,4 +1,4 @@
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+{{- if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 <div class="pagination">
 
   {{ with .Paginator.Prev }}
