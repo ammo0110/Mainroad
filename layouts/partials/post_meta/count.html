@@ -1,0 +1,9 @@
+{{- $count := len .RegularPages -}}
+{{- if gt $count 0 }}
+<div class="meta__item-categories meta__item">
+	{{ partial "svg/files.svg" (dict "class" "meta__icon") }}
+	<span class="meta__text">
+		<a class="meta__link" href="{{ .RelPermalink }}" rel="category">{{ printf "%d articles" $count }}</a>
+	</span>
+</div>
+{{- end }}
