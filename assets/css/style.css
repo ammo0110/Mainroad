@@ -631,7 +631,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	width: 100%;
 }
 
-.content a,
+.content a {
+	color: {{ $highlightColor }};
+}
+
 .warning a,
 .authorbox__description a {
 	font-weight: 700;
